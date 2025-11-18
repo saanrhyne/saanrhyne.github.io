@@ -13,7 +13,11 @@
       --dark-blue: #1E2A36;
       --muted-blue: #4A6FA5;
       --muted-light-blue: #C7D3E3;
-      --muted-orange: #E9A66F;
+      --muted-orange: #ffd073;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -101,68 +105,63 @@
 
 
     /* --------------------------------------------- */
-    /* ACHIEVEMENT FLIP CARDS */
-    /* --------------------------------------------- */
+/* ACHIEVEMENT FLIP CARDS (FIXED) */
+/* --------------------------------------------- */
 
-    #achievements {
-      padding: 80px 10%;
-    }
-    .ach-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-    }
+#achievements {
+  padding: 80px 10%;
+}
 
-    .ach-card {
-      width: 100%;
-      height: 260px;
-      perspective: 1000px;
-    }
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px; /* Spacing between cards */
+}
 
-    .ach-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
+.ach-card {
+  width: 100%;
+  height: 300px; /* More consistent height */
+  perspective: 1000px;
+}
 
-    .ach-card:hover .ach-inner {
-      transform: rotateY(180deg);
-    }
+.ach-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-    .ach-front, .ach-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      overflow: hidden;
-    }
+.ach-card:hover .ach-inner {
+  transform: rotateY(180deg);
+}
 
-    .ach-front {
-      background: var(--muted-blue);
-      padding: 25px;
-      color: white;
-    }
+.ach-front, .ach-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
 
-    .ach-front h3 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+/* Front (text side) */
+.ach-front {
+  background: var(--muted-blue);
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .ach-front p {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
-    .ach-back {
-      transform: rotateY(180deg);
-      background-size: cover;
-      background-position: center;
-    }
+/* Back (photo side) */
+.ach-back {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-position: center;
+}
 
 
     /* --------------------------------------------- */
@@ -213,22 +212,6 @@
 
     .project button:hover {
       transform: scale(1.05);
-    }
-
-    /* GALLERY (unchanged for now) */
-    #gallery {
-      padding: 80px 10%;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .gallery-grid div {
-      height: 200px;
-      background: var(--muted-blue);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     /* ABOUT */
@@ -373,14 +356,6 @@
     </p>
   </section>
 
-
-  <!-- GALLERY -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div></div><div></div><div></div>
-    </div>
-  </section>
 
 </body>
 </html>
