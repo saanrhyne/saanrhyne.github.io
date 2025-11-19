@@ -2,6 +2,70 @@
 <html>
   <head>
     <title>Saan Rhyne</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --white: #f9ebe0;
+        --black: #262626;
+        --dark: #255c99;
+        --light: #7ea3cc;
+        --accent: #ffaa64;
+      }
+      
+      * {
+        font-family: Tomorrow, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #navigation {
+        position: sticky;
+        top: 0;
+        background-color: var(--black);
+        box-shadow: 0 0.5vw 2vw var(--black);
+      }
+
+      #navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      
+      #navigation ul li a {
+        display: block;
+        padding: 1vh 5vw;
+        color: var(--white);
+        background-color: var(--black);
+        font-size: 1.75vw;
+        text-decoration: none;
+      }
+      
+      #navigation ul li a:hover {
+        color: var(--accent);
+      }
+      
+      #home {
+        margin-top: 2vh;
+        height: 94vh;
+        text-align: center;
+      }
+      
+      #home h1 {
+        padding-top: 39vh;
+        padding-bottom: 1vh;
+      }
+      
+      #home h3 {
+        padding-bottom: 3vh;
+      }
+      
+    </style>
+    
   </head>
   <body>
     
@@ -9,7 +73,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog">My Blog</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
