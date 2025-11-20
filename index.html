@@ -7,7 +7,7 @@
     
     <style>
       :root {
-        --white: #f9f6ee;
+        --white: #fcf6e6;
         --black: #262626;
         --dark: #255c99;
         --light: #7ea3cc;
@@ -20,7 +20,7 @@
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
-        scroll-margin-top: 6vh;
+        scroll-margin-top: 4vh;
       }
       
       #navigation {
@@ -60,7 +60,12 @@
         padding-top: 1vh;
       }
       
-      #home h1 {
+      #home a {
+        text-decoration: none;
+      }
+
+      #home a h1 {
+        transition: all .4s ease;
         margin-top: 34vh;
         margin-bottom: 1vh;
         font-size: 7vw;
@@ -68,7 +73,8 @@
         animation: stretch 2s;
       }
       
-      #home h1:hover {
+      #home a h1:hover {
+        transition: all .4s ease;
         color: var(--light);
         animation-play-state: paused;
       }
@@ -90,11 +96,6 @@
         animation: typing 5s;
       }
       
-      #home h3:hover {
-        color: var(--black);
-        animation-play-state: paused;
-      }
-      
       @keyframes typing {
         0% {width: 0;}
         100% {width: 80vw;}
@@ -107,45 +108,56 @@
       }
       
       #home button:hover {
-        animation: expand 2s infinite;
+        animation: expand 1.5s infinite;
         cursor: pointer;
       }
       
       @keyframes expand {
-        0% {transform: scale(1); background-color: var(--accent);}
-        25% {background-color: var(--light);}
-        50% {transform: scale(1.5); background-color: var(--light);}
-        75% {background-color: var(--light);}
-        100% {transform: scale(1); background-color: var(--accent);}
+        0% {transform: scale(1);}
+        50% {transform: scale(1.5);}
+        100% {transform: scale(1);}
+      }
+
+      #achievements {
+        background-color: var(--black);
       }
 
       #achievements h1 {
         text-align: center;
-        font-size: 3vw;
-        margin-top: 2vh;
-        margin-bottom: 1vh;
+        font-size: 4vw;
+        padding: 2vh 0;
+        color: var(--white);
       }
       
       #achievements-grid {
-        margin: 0 13vw;
+        margin: 0 10vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        padding-bottom: 4vh;
       }
       
       .achievement {
-        margin: 10px;
-        border: 1px solid var(--black);
+        transition: all .4s ease;
+        margin: 2vh 1.7vw;
         border-radius: 5px;
-        padding-bottom: 20px;
         display: grid;
         place-items: center;
         text-align: center;
+        background-color: var(--white);
+      }
+
+      .achievement:hover {
+        transition: all .4s ease;
+        transform: scale(1.05);
+        box-shadow: 0 0 1vw var(--white);
       }
 
       .achievement img {
+        object-fit: cover;
         height: 25vh;
-        width: 75vh;
+        width: 37vw;
+        border-radius: 4px;
       }
 
       .achievement h2 {
@@ -156,6 +168,7 @@
       .achievement p{
         margin: 0 1vw;
         font-size: 0.9vw;
+        padding-bottom: 2vh;
       }
       
     </style>
@@ -173,7 +186,7 @@
     </section>
     
     <section id="home">
-      <h1>Saan Rhyne</h1>
+      <a href="#achievements"><h1>Saan Rhyne</h1></a>
       <h2>High School Sophomore | CyberPatriot National Finalist</h2>
       <a href="/blog"><button>My Blog</button></a>
     </section>
@@ -182,22 +195,22 @@
       <h1>Achievements</h1>
       <section id="achievements-grid">
         <section class="achievement">
-          <img src="/assets/cyberpatriot-nationals.jpg" alt="A photo of my team and I at the CyberPatriot national finals competition">
+          <img src="C:\Users\saanv\Downloads\cyberpatriot-nationals.jpg" alt="A photo of my team and I at the CyberPatriot national finals competition">
           <h2>CyberPatriot National Finalist</h2>
           <p>Team placed 10th in the U.S. and Canada in CyberPatriot 17. Demonstrated excellence in Windows and Linux security, and Cisco configuration.</p>
         </section>
         <section class="achievement">
-          <img src="C:\Users\saanv\Downloads\img\lonelydog0.png"> <!-- replace with actual image later twin -->
+          <img src="C:\Users\saanv\Downloads\lbc2.jpeg" alt="A photo of my team and I at the Loyola Blakefield Cyber Challenge">
           <h2>Loyola Blakefield Cyber Challenge</h2>
           <p>Team placed first in the beginner division, winning $600. Competed in categories like forensics, cryptography, web exploitation, and more.</p>
         </section>
         <section class="achievement">
-          <img src="C:\Users\saanv\Downloads\img\lonelydog0.png"> <!-- replace with actual image later twin -->
+          <img src="C:\Users\saanv\Downloads\seido.jpg" alt="A photo of me shaking hands with my instructor at our karate dojo">
           <h2>World Seido Karate Tournament</h2>
           <p>Placed 2nd in the teen Advanced Green belt division for fighting. Showed determination, fitness, and perseverance.</p>
         </section>
         <section class="achievement">
-          <img src="C:\Users\saanv\Downloads\img\lonelydog0.png"> <!-- replace with actual image later twin -->
+          <img src="C:\Users\saanv\Downloads\apscholar.png" alt="A screenshot of my AP scholar award from the College Board website">
           <h2>AP Scholar</h2>
           <p>Scored 5s on AP United States History, AP Precalculus, and AP Computer Science Principles during my freshman year.</p>
         </section>
