@@ -9,13 +9,13 @@
       :root {
         --white: #fcf6e6;
         --black: #262626;
-        --dark: #255c99;
-        --light: #7ea3cc;
+        --main: #255c99;
         --accent: #fcd0a9;
         --gray: #40403f;
       }
       
       * {
+        transition: all .4s ease;
         font-family: Tomorrow, sans-serif;
         margin: 0;
         padding: 0;
@@ -27,7 +27,7 @@
         position: sticky;
         top: 0;
         background-color: rgba(36, 36, 36, 0.95); /* hard coded color here incase I need to replace */
-        box-shadow: 0 0.5vw 2vw var(--black);
+        box-shadow: 0 0 2vw var(--black);
       }
 
       #navigation ul {
@@ -49,6 +49,7 @@
       
       #navigation ul li a:hover {
         color: var(--accent);
+        text-shadow: 0 0 1vw var(--white);
       }
       
       #home {
@@ -65,18 +66,17 @@
       }
 
       #home a h1 {
-        transition: all .4s ease;
         margin-top: 34vh;
         margin-bottom: 1vh;
         font-size: 7vw;
-        color: var(--dark);
+        color: var(--main);
         animation: stretch 2s;
       }
       
       #home a h1:hover {
-        transition: all .4s ease;
-        color: var(--light);
+        color: var(--white);
         animation-play-state: paused;
+        text-shadow: 0 0 2vw var(--gray);
       }
       
       @keyframes stretch {
@@ -105,17 +105,12 @@
         background-color: var(--accent);
         padding: 1vh 1vw;
         border-radius: 10px;
+        box-shadow: 0 0 0.5vw var(--black);
       }
       
       #home button:hover {
-        animation: expand 1.5s infinite;
         cursor: pointer;
-      }
-      
-      @keyframes expand {
-        0% {transform: scale(1);}
-        50% {transform: scale(1.5);}
-        100% {transform: scale(1);}
+        transform: scale(1.5);
       }
 
       #achievements {
@@ -138,7 +133,6 @@
       }
       
       .achievement {
-        transition: all .4s ease;
         margin: 2vh 1.7vw;
         border-radius: 5px;
         display: grid;
@@ -148,7 +142,6 @@
       }
 
       .achievement:hover {
-        transition: all .4s ease;
         transform: scale(1.05);
         box-shadow: 0 0 1vw var(--white);
       }
@@ -170,6 +163,24 @@
         font-size: 0.9vw;
         padding-bottom: 2vh;
       }
+
+      #footer {
+        background-color: var(--black);
+        padding: 2vh 0;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      #footer a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: .75vw;
+      }
+
+      #footer a p:hover {
+        text-shadow: 0 0 1vw var(--white);
+        transform: scale(1.05);
+      }
       
     </style>
     
@@ -179,7 +190,7 @@
     <section id="navigation">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog" target="_blank">Blog</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
@@ -188,7 +199,7 @@
     <section id="home">
       <a href="#achievements"><h1>Saan Rhyne</h1></a>
       <h2>High School Sophomore | CyberPatriot National Finalist</h2>
-      <a href="/blog"><button>My Blog</button></a>
+      <a href="/blog" target="_blank"><button>My Blog</button></a>
     </section>
     
     <section id="achievements">
@@ -223,11 +234,11 @@
         <h2>Baltimore Cyber Games</h2>
         <p>Competition to introduce middle school students to the worlds of cybersecurity and technology.
           Currently in its 3rd year, with over 100 students having attended past competitions.
-          Learn more at <a href="http://www.baltcybergames.com/">baltcybergames.com</a></p>
+          Learn more at <a href="http://www.baltcybergames.com/" target="_blank">baltcybergames.com</a></p>
       </section>
       <section class="project">
         <h2>Personal Website and Blog</h2>
-        <p>This personal portfolio which you are visitng right now, and my <a href="/blog">blog</a>.
+        <p>This personal portfolio which you are visitng right now, and my <a href="/blog" target="_blank">blog</a>.
         Website programmed by hand in HTML, CSS, and JavaScript. Blog created using the Chirpy template.
         CTF writeups, cybersecurity guides, and high school resources can be found on my blog.</p>
       </section>
@@ -240,7 +251,7 @@
     </section>
 
     <section id="footer">
-      <p>© 2025 Saan Rhyne</p>
+      <a href="https://github.com/saanrhyne" target="_blank"><p>© 2025 Saan Rhyne | Licensed under CC BY-NC 4.0</p></a>
     </section>
   </body>
 </html>
