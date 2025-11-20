@@ -26,8 +26,9 @@
       #navigation {
         position: sticky;
         top: 0;
-        background-color: rgba(36, 36, 36, 0.95); /* hard coded color here incase I need to replace */
+        background-color: rgba(36, 36, 36, 0.95);
         box-shadow: 0 0 2vw var(--black);
+        z-index: 10;
       }
 
       #navigation ul {
@@ -57,7 +58,7 @@
         text-align: center;
         background: linear-gradient(45deg, rgba(126, 163, 204, 0.75) 0%,
         rgba(249, 235, 224, 0.5) 50%,
-        rgba(255, 170, 100, 0.5) 100%); /* hard coded color here incase I need to replace */
+        rgba(255, 170, 100, 0.5) 100%);
         padding-top: 1vh;
       }
       
@@ -164,6 +165,66 @@
         padding-bottom: 2vh;
       }
 
+      #projects {
+        background: linear-gradient(var(--black), var(--main));
+      }
+
+      #projects h1 {
+        text-align: center;
+        font-size: 4vw;
+        padding: 2vh 0;
+        color: var(--white);
+      }
+
+      #projects-columns {
+        margin: 0 10vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 2vh;
+      }
+
+      .project {
+        margin: 2vh 1.7vw;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        background-color: var(--white);
+        padding: 4vh;
+      }
+
+      .project:hover {
+        box-shadow: 0 0 1vw var(--accent);
+      }
+
+      .project img {
+        object-fit: cover;
+        height: 50vh;
+        width: 20vw;
+        border-radius: 4px;
+      }
+
+      .project h2 {
+        margin: 1vw 0;
+      }
+
+      .project p {
+        width: 20vw;
+        height: 15vh;
+      }
+
+      .project button {
+        background-color: var(--accent);
+        padding: 1vh 1vw;
+        border-radius: 10px;
+        box-shadow: 0 0 0.5vw var(--black);
+      }
+      
+      .project button:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+      }
+
       #footer {
         background-color: var(--black);
         padding: 2vh 0;
@@ -211,7 +272,7 @@
           <p>Team placed 10th in the U.S. and Canada in CyberPatriot 17. Demonstrated excellence in Windows and Linux security, and Cisco configuration.</p>
         </section>
         <section class="achievement">
-          <img src="assets\lbc2.jpeg" alt="A photo of my team and I at the Loyola Blakefield Cyber Challenge">
+          <img src="assets\lbc2.JPEG" alt="A photo of my team and I at the Loyola Blakefield Cyber Challenge">
           <h2>Loyola Blakefield Cyber Challenge</h2>
           <p>Team placed first in the beginner division, winning $600. Competed in categories like forensics, cryptography, web exploitation, and more.</p>
         </section>
@@ -229,24 +290,29 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <section class="project">
-        <h2>Baltimore Cyber Games</h2>
-        <p>Competition to introduce middle school students to the worlds of cybersecurity and technology.
-          Currently in its 3rd year, with over 100 students having attended past competitions.
-          Learn more at <a href="http://www.baltcybergames.com/" target="_blank">baltcybergames.com</a></p>
-      </section>
-      <section class="project">
-        <h2>Personal Website and Blog</h2>
-        <p>This personal portfolio which you are visitng right now, and my <a href="/blog" target="_blank">blog</a>.
-        Website programmed by hand in HTML, CSS, and JavaScript. Blog created using the Chirpy template.
-        CTF writeups, cybersecurity guides, and high school resources can be found on my blog.</p>
-      </section>
-      <section class="project">
-        <h2>Locked In: Focus Extension</h2>
-        <p>In progress! Google Chrome extension that uses JavaScript commands and randomization.
-        If a user visits a website that they are not supposed to be on during focus period,
-        that website is modified to be increasingly more broken until the user's focus time ends.</p>
+      <h1>Projects</h1>
+      <section id="projects-columns">
+        <section class="project">
+          <img src="/assets/cybergames.jpeg" alt="A photo of all the students who attended the Cyber Games 2025">
+          <h2>Baltimore Cyber Games</h2>
+          <p>Student-created competition to introduce middle school students to the worlds of cybersecurity and technology.<br><br>
+            Currently in its 3rd year, with over 100 students having attended past competitions.</p>
+          <a href="https://baltcybergames.com" target="_blank"><button>baltcybergames.com</button></a>
+        </section>
+        <section class="project">
+          <img src="/assets/websitecode.png" alt="A screenshot of VS Code where I was editing my site">
+          <h2>Personal Website and Blog</h2>
+          <p>Website programmed in HTML and CSS without the use of generative AI. Blog created using the Chirpy template.<br><br>
+          CTF writeups, cybersecurity guides, and high school resources can be found on my blog.</p>
+          <a href="/blog" target="_blank"><button>My Blog</button></a>
+        </section>
+        <section class="project">
+          <img src="/assets/fillerimageuntilistarttheproject.png" alt="A generic screenshot that says 'Locked In', as I have not started the project yet">
+          <h2>Locked In: Focus Extension</h2>
+          <p>Google Chrome extension to force users to focus by bricking websites that are not part of the focus session.<br><br>
+          Currently in progress, part of my mission to learn web dev and JS better.</p>
+          <a href="FILL IN THE LINK" target="_blank"><button>GitHub Repo</button></a> <!-- NOTE: fill in link -->
+        </section>
       </section>
     </section>
 
