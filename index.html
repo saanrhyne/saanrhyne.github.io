@@ -159,14 +159,25 @@
         font-size: 1.25vw;
       }
 
-      .achievement p{
+      .achievement p {
         margin: 0 1vw;
         font-size: 0.9vw;
         padding-bottom: 2vh;
       }
 
-      #projects {
+      #resume {
         background: linear-gradient(var(--black), var(--main));
+      }
+
+      #resume button {
+        background-color: var(--accent);
+        padding: 1vh 1vw;
+        border-radius: 10px;
+        box-shadow: 0 0 0.5vw var(--black);
+      }
+
+      #projects {
+        background-color: var(--main);
       }
 
       #projects h1 {
@@ -253,7 +264,9 @@
         <li><a href="#home">Home</a></li>
         <li><a href="/blog" target="_blank">Blog</a></li>
         <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#footer">Contact</a></li>
       </ul>
     </section>
     
@@ -289,6 +302,11 @@
       </section>
     </section>
 
+    <section id="resume">
+      <a href="/resume.pdf" target="_blank"><button>Resume</button></a>
+      <h2>For a more complete resume and references, <a href="#footer">contact me</a></h2>
+    </section>
+    
     <section id="projects">
       <h1>Projects</h1>
       <section id="projects-columns">
@@ -315,9 +333,10 @@
         </section>
       </section>
     </section>
-
+    
     <section id="footer">
       <a href="https://github.com/saanrhyne" target="_blank"><p>© 2026 Saan Rhyne | Licensed under CC BY-NC 4.0</p></a>
+      <p>Contact: <a href="mailto:contact@saanrhyne.com">contact@saanrhyne.com</a></p>
     </section>
   </body>
 </html>
